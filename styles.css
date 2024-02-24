@@ -43,6 +43,7 @@ body {
     font-weight: 500;
     color: #252b42;
     background: #fafafa;
+    cursor: default;
 }
 
 /* ==================================================================================== TECHNICAL ========================================================================================= */
@@ -97,6 +98,10 @@ header {
 
 .header_phone_image img {
   width: 25px;
+}
+
+.header_phone_number_mobile {
+  display: none;
 }
 
 .header_overtitle {
@@ -159,6 +164,15 @@ header {
     font-size: 14px;
     letter-spacing: 0.1rem;
     line-height: 150%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header_phone_number {
+    display: none;
+  }
+  .header_phone_number_mobile {
+    display: block;
   }
 }
 
@@ -320,10 +334,6 @@ footer {
   font-weight: 700;
 }
 
-/* .contacts_titles {
-  width: 100%;
-} */
-
 .footer_contacts_address {
   display: flex;
   gap: 100px;
@@ -339,6 +349,10 @@ footer {
   font-weight: 600;
   line-height: 140%;
   white-space: nowrap;
+}
+
+.item_title:nth-child(2) {
+  margin-bottom: 60px;
 }
 
 .item_title_mobile {
@@ -415,6 +429,12 @@ footer {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .item_title:nth-child(2) {
+    margin-bottom: 77px;
+  }
+}
+
 @media screen and (max-width: 557px) {
   footer {
     padding: 25px;
@@ -424,7 +444,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .footer_contacts_address {
     display: none;
   }
