@@ -14,12 +14,6 @@ a {
   text-decoration: none;
 }
 
-ul,
-ol,
-li {
-    list-style: none;
-}
-
 img {
     vertical-align: top;
 }
@@ -47,10 +41,6 @@ body {
 }
 
 /* ==================================================================================== TECHNICAL ========================================================================================= */
-
-/* ._ibg {
-  position: relative;
-} */
 
 ._ibg img {
   position: absolute;
@@ -198,6 +188,21 @@ header {
   }
 }
 
+@media screen and (max-width: 560px) {
+  .header_overtitle {
+    /* padding-top: 80px; */
+  }
+  .header_title {
+    /* padding-top: 80px; */
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .header_title {
+    font-size: 40px;
+  }
+}
+
 @media screen and (max-width: 478px) {
   header {
     background-position-x: 50%;
@@ -230,6 +235,17 @@ header {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .header_phone_block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header_logo {
+    margin-top: 10px;
+    text-align: left;
+  }
+}
+
 @media screen and (max-width: 350px) {
   .header_title {
     font-size: 32px;
@@ -245,6 +261,12 @@ header {
 @media screen and (max-width: 300px) {
   .header_title {
     font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 270px) {
+  .header_title {
+    font-size: 24px;
   }
 }
 
@@ -264,19 +286,25 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 70px;
-  margin-bottom: 150px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .info_block {
-  flex: 0 1 20%;
+  padding: 45px;
+  flex: 0 1 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 50px;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
+  background-color: #f5f5f5;
 }
+
+/* .info_block:nth-child(2) {
+  flex: 1 1 40%;
+} */
 
 .info_block_title {
   margin-bottom: 12px;
@@ -289,47 +317,128 @@ header {
   line-height: 150%;
 }
 
+.info_block_text ul {
+  text-align: left;
+}
+
 .divider {
   margin: 20px 0px;
   border-bottom: 1px solid lightgrey;
 }
 
+.divider_short {
+  margin: 20px 150px 50px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.content_list {
+  /* margin: 0 auto; */
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.content_list ul {
+  margin: 20px 0px 20px 150px;
+  font-size: 16px;
+  /* line-height: 140%; */
+}
+
 .content_text {
+  width: 70%;
+  margin: 50px auto 0;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
+  /* font-weight: 600; */
+  line-height: 150%;
+}
+
+@media screen and (max-width: 1650px) {
+  .info_block {
+    flex: 1 1 40%;
+  }
 }
 
 @media screen and (max-width: 1399px) {
   .main_container {
     /* margin: 300px 50px 50px; */
   }
+  .info_block {
+    /* flex: 1 1 40%; */
+    margin: 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .content_list ul {
+    margin: 20px 0px 20px 50px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
   .main_block_content {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
   .info_block {
-    flex: 1 1 40%;
+    /* flex: 1 1 40%; */
+    margin: 20px;
+  }
+  .divider_short {
+    margin: 10px 50px 50px;
+    border-bottom: 1px solid lightgrey;
   }
 }
 
 @media screen and (max-width: 920px) {
   .main_container {
-    margin: 50px 30px;
+    margin: 30px 30px;
+  }
+  .main_block_content {
+    margin-top: 30px;
+  }
+  .info_block {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .info_block {
+    flex: 1 1 100%;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 666px) {
+  .main_block_content {
+    margin-bottom: 25px;
+  }
+  .info_block_title {
+    text-align: left;
+    margin-left: 30px;
+  }
+  .content_list {
+    margin-bottom: 0px;
+  }
+  .content_text {
+    margin: 0 auto;
+    font-size: 18px;
+  }
+  .divider_short {
+    margin-top: 0;
+    margin-bottom: 25px;
   }
 }
 
 @media screen and (max-width: 560px) {
   .main_container {
-    margin: 50px 16px;
+    margin: 20px 16px;
   }
   .main_block_content {
-    margin-bottom: 50px;
+    margin-top: 20px;
+    /* margin-bottom: 50px; */
   }
-  .info_block {
+  /* .info_block {
     flex: 1 1 100%;
-  }
+  } */
 }
 
 /* ==================================================================================== FOOTER =========================================================================================== */
